@@ -22,6 +22,7 @@ def average_positives (list):
 
 
 # EXERCISE 2
-
+def test_asserts():
+    
 
 # code.interact(local=dict(globals(), **locals()))
