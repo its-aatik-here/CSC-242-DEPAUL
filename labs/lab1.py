@@ -50,9 +50,5 @@ class socialAccount (object):
             self.follower -= 1
     def status (self):
         print(f"you have {self.follower} followers")
-    def __str__(self):
-        return f"you have {self.follower} followers".format(self.follower)
-    def __repr__(self):
-        return "socialAccount({})".format(self.follower)
 
 # code.interact(local=dict(globals(), **locals()))
