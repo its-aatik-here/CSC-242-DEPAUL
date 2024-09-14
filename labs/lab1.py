@@ -25,13 +25,13 @@ assert areBothStrings("1",1) == False
 assert areBothStrings(1,1) == False
 
 
-def secondString (randomword,second=" "):
+def secondString (randomword,second=""):
     if len(randomword)>2:
         second = randomword [1]
     return second
 
 assert secondString ("hello") == "e"
-assert secondString ("1") == " "
+assert secondString ("1") == ""
 assert secondString ("bye") == "y"
 
 
