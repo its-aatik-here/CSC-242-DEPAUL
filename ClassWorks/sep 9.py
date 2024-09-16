@@ -31,6 +31,12 @@ class animal(object) :
     def speak(self):
        res = "I am a " +self.species+ " and I "+self.language
        return res
+    def __repr__(self):
+        return f"animal(self.species), (self.language)"
+    def __str__(self):
+        return self.speak
+    
+    
        
 
 
