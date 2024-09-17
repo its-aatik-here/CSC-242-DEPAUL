@@ -52,10 +52,11 @@ def test_asserts():
     assert str_to_list("Ali") == ["A",'l',"i"]
     assert str_to_list("apple") == ["a",'p',"p","l","e"]
 
-    assert makeExcited("You are lazy.") == ("You are Lazy!")
-    assert makeExcited("siuuuuu.") == ("siuuuuu!")
-    assert makeExcited("I wanna sleep.") == ("I wanna sleep!")
+    assert makeExcited("You are lazy.") == "You are lazy!"
+    assert makeExcited("siuuuuu.") == "siuuuuu!"
+    assert makeExcited("I wanna sleep.") == "I wanna sleep!"
 
     assert double_evens([9,10,11,12]) == ([9,20,11,24])
     assert double_evens([0,2,4,6,8]) == ([0,4,8,12,16])
     assert double_evens([1,3,5,7,9]) == ([1,3,5,7,9])
+test_asserts()
