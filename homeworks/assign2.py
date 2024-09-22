@@ -45,19 +45,30 @@ class citizen ():
         self.passport_number = passport_number
         self.country = country
     def get_name(self):
-        return self.name
+        print (f"{self.name}=")
     def get_date_of_birth(self):
-        return self.date_of_birth
+        print (f"{self.date_of_birth}")
     def get_passport_number(self):
-        return self.passport_number
+        print (f"{self.passport_number}")
     def get_country(self):
-        return self.country
+        print (f"{self.country}")
     def national_anthem(self):
         print ("")
 
+#Exercie 4
 
-cit = citizen('Brandon H. Meng','2/10/1995','8675309','Germany')
-cit.get_name()
-cit.get_date_of_birth()
-cit.get_passport_number()
-cit.get_country()
+class german(citizen):
+    def __init__(self,name,date_of_birth,passport_number):
+        citizen.__init__(self,name,date_of_birth,passport_number, "germany")
+    def national_anthem(self):
+        print ("I am from germany......")
+    def national_dishes(self):
+        print ('egg burger',"chicken sandwich")
+class french(citizen):
+    def __init__(self,name,date_of_birth,passport_number):
+        citizen.__init__(self,name,date_of_birth,passport_number, "france")
+    def national_anthem(self):
+        print("I am from france")
+    def national_dishes(self):
+        print ('french fries',"french toast")
+    
