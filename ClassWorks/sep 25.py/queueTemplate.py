@@ -44,4 +44,7 @@ class  q_iterator:
 class my_list_iterator:
     def  __init__(self, lst):
         self.lst = lst
-        
+        self.index = len(lst)-1
+    def __next__ (self):
+        if self.index<0:
+            raise StopIteration
