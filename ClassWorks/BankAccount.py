@@ -3,6 +3,8 @@ class Account(object):
 
     def set(self, value):
         'set the balance to value'
+        assert type(value) == int or type (value) == float, "non-number set"
+        assert value>=0, "Negative number used in set method."
         self.balance = value
 
     def get(self):
@@ -11,14 +13,20 @@ class Account(object):
 
     def deposit(self, value):    
         'updates the bank account by depositing value amount'
+        assert type(value) == int or type (value) == float, "non-number set"
+        assert value>=0, "Negative number used in set method."
         self.balance += value      
 
     def withdraw(self, value):  
         'updates the bank account by withdrawing value amount'
+        assert type(value) == int or type (value) == float, "non-number set"
+        assert value>=0, "Negative number used in set method."
+        assert value <= self.balance, 'insufficient funds'
         self.balance -= value
 
     def __init__(self, value = 0.0):
-        'the constructor'
+        assert type(value) == int or type (value) == float, "non-number set"
+        assert value>=0, "Negative number used in set method."
         self.balance = value
 
     def __repr__(self):
