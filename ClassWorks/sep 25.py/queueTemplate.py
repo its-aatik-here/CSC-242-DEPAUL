@@ -40,6 +40,17 @@ class  q_iterator:
         #     return res
         # else:
         #     raise StopIteration
+class q_iterator_skips:
+    def __init__(self, in_queue):
+        self.q = in_queue
+        self.index = 0
+    def   __next__(self):
+        if self.index <self.queue.size():
+            res = self.queue[self.index]
+            self.index += 2
+            return res
+        else:
+            raise StopIteration
 
 class my_list_iterator:
     def  __init__(self, lst):
