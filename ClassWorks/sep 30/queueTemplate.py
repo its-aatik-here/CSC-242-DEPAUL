@@ -1,24 +1,43 @@
 class queue(object):
     
     def __init__(self):
-        pass
+        self.items = []
         
     def dequeue(self):
-        pass
+        if self.isEmpty():
+            raise EmptyQueue("cannot dequeue from empty queue")
+        return self.items.pop(0)
     
     def enqueue (self, item):
-        pass
-    
+        self.items.append(item)
+
     def size(self):
-        pass
+        return  len(self.items)
     
     def isEmpty(self):
-        pass
+        return self.size()==0
+    
     
     def __repr__(self):
-        pass
+        return str(self.items)
     
     def __str__(self):
-        pass
+        return (self.items)
 
 
+
+class EmptyQueue (Exception):
+    pass
+
+
+q = queue()
+try:
+    q.dequeue()
+except EmptyQueue as e:
+    print (e)
+    
+q.enqueue (1)
+q.enqueue (2)
+print (q.dequeue())
+print (q.size())
+print (q.isEmpty())
