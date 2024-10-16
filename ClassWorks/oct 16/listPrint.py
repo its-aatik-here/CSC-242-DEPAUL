@@ -42,18 +42,18 @@ def findmax(lst):
     if len(lst) == 0:
         return 0
     elif type(lst[0]) == int or type (lst[0]) == float:
-        val = findmax(lst[1:])
-        if lst[0] > val:
+        x = findmax(lst[1:])
+        if lst[0] > x:
             return lst[0]
         else:
-            return val
+            return x
     elif type (lst[0]) == list:
-        val1 =  findmax(lst[0])
-        val2 = findmax(lst[1:])
-        if val1  > val2:
-            return val1
+        y =  findmax(lst[0])
+        z = findmax(lst[1:])
+        if y  > z:
+            return y
         else:
-            return val2
+            return z
     else:
         return  findmax(lst[1:])
 
