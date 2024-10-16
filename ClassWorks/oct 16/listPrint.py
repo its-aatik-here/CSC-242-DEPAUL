@@ -38,6 +38,30 @@ def countint(lst):
     else:
         return countint(lst[1:])
 
+def findmax(lst):
+    if len(lst) == 0:
+        return 0
+    elif type(lst[0]) == int or type (lst[0]) == float:
+        val = findmax(lst[1:])
+        if lst[0] > val:
+            return lst[0]
+        else:
+            return val
+    elif type (lst[0]) == list:
+        val1 =  findmax(lst[0])
+        val2 = findmax(lst[1:])
+        if val1  > val2:
+            return val1
+        else:
+            return val2
+    else:
+        return  findmax(lst[1:])
+
+
+
+
+
+
 
 
 
